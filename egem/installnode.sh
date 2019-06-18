@@ -6,6 +6,18 @@ sudo apt-get update -y
 echo "Intalling fail2ban"
 sudo apt install fail2ban -y
 
+echo "Installing Firewall"
+sudo apt install ufw -y
+ufw default allow outgoing
+ufw default deny incoming
+ufw allow ssh/tcp
+ufw limit ssh/tcp
+ufw allow 8895/tcp
+ufw allow 30666/tcp
+ufw allow 8898/tcp
+ufw logging on
+ufw --force enable
+
 echo "Installing Docker Packages"
 sudo apt-get install \
     apt-transport-https \
