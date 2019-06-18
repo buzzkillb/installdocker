@@ -37,3 +37,12 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.24.0/docker-
 
 echo "Apply executable permissions to the binary"
 sudo chmod +x /usr/local/bin/docker-compose
+
+echo "make compose directory"
+mkdir DD
+
+echo "get docker-compose.yml"
+wget https://raw.githubusercontent.com/buzzkillb/installdocker/master/egem/docker-compose.yml
+
+echo "run docker compose go-egem"
+docker-compose up -d
