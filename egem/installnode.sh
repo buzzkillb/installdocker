@@ -46,3 +46,9 @@ wget https://raw.githubusercontent.com/buzzkillb/installdocker/master/egem/docke
 
 echo "run docker compose go-egem"
 docker-compose up -d
+
+echo "Run Watchtower for autoupdates to go-egem repo"
+docker run -d \
+    --name watchtower \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+    containrrr/watchtower
