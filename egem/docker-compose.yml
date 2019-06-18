@@ -1,0 +1,8 @@
+GO-EGEM:
+  image: buzzkillb/goegem:latest
+  volumes:
+    - ~/.ethergem:/data
+  command: --rpc --rpcapi=web3,eth,net,db,personal,txpool --rpccorsdomain=* --rpcaddr=0.0.0.0 --rpcvhosts=*
+  ports:
+    - 8895:8895
+    - 30666:30666
