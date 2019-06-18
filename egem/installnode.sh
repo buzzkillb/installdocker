@@ -51,7 +51,8 @@ echo "Apply executable permissions to the binary"
 sudo chmod +x /usr/local/bin/docker-compose
 
 echo "make compose directory"
-mkdir DD
+mkdir qn
+cd qn
 
 echo "get docker-compose.yml"
 wget https://raw.githubusercontent.com/buzzkillb/installdocker/master/egem/docker-compose.yml
