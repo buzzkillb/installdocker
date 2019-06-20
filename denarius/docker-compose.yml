@@ -1,0 +1,7 @@
+fortunastake:
+  image: buzzkillb/denariusd:latest
+  volumes:
+    - ~/.denarius:/data
+  net: host
+  command:
+    -fortunastakeminprotocol=31005
