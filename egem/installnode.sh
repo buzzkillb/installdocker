@@ -15,6 +15,7 @@ ufw limit ssh/tcp
 ufw allow 8895/tcp
 ufw allow 30666/tcp
 ufw allow 8898/tcp
+ufw allow 8897/tcp
 ufw logging on
 ufw --force enable
 
