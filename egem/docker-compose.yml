@@ -6,3 +6,10 @@ GO-EGEM:
   ports:
     - 8895:8895
     - 30666:30666
+STATS-EGEM:
+  image: buzzkillb/goegem:stats
+  volumes:
+    - ~/.ethergem:/data
+  ports:
+    - 8897:8897
+  net: host
