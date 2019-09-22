@@ -1,13 +1,13 @@
 #!/bin/sh
 
 echo "Updating Linux Packages"
-sudo apt-get update -y
+apt-get update -y
 
 echo "Intalling fail2ban"
-sudo apt install fail2ban -y
+apt install fail2ban -y
 
 echo "Installing Docker Packages"
-sudo apt-get install \
+apt-get install \
     apt-transport-https \
     ca-certificates \
     curl \
@@ -18,22 +18,22 @@ echo " Add Docker's official GPG key"
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 
 echo "Setup stable repository"
-sudo add-apt-repository \
+dd-apt-repository \
    "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
    $(lsb_release -cs) \
    stable"
 
 echo "Update the apt package index"
-sudo apt-get update -y
+apt-get update -y
 
 echo "Installing latest version of Docker"
-sudo apt-get install docker-ce docker-ce-cli containerd.io -y
+apt-get install docker-ce docker-ce-cli containerd.io -y
 
 echo "Verifying Docker Installed Correctly"
-sudo docker run hello-world
+docker run hello-world
 
 echo "Installing docker-compose"
-sudo curl -L "https://github.com/docker/compose/releases/download/1.24.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+curl -L "https://github.com/docker/compose/releases/download/1.24.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 
 echo "Apply executable permissions to the binary"
-sudo chmod +x /usr/local/bin/docker-compose
+chmod +x /usr/local/bin/docker-compose
