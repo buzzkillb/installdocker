@@ -23,8 +23,8 @@ echo "Get Chaindata"
 sudo apt-get -y install wget unzip
 cd ~/.denarius
 rm -rf database txleveldb smsgDB
-wget https://github.com/carsenk/denarius/releases/download/v3.3.9.1/chaindata2022527.zip
-unzip chaindata2022527.zip
+wget https://denarii.cloud/chaindata.zip
+unzip chaindata.zip
 cd ~
 
 echo "Installing 2G Swapfile"
